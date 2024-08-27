@@ -1,0 +1,20 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /demo
+#配置mq的地址
+spring:
+  rabbitmq:
+    host: 192.168.137.128
+    port: 5672
+    username: admin
+    password: 123
+    publisher-confirm-type: correlated #开启交换机确认消息
+    publisher-returns: true #队列的确认
+    virtual-host: /
+    listener:
+      simple:
+        acknowledge-mode: manual #消费端把消息确认模式改为手动确认
+        prefetch: 1  #消费端限流: 设置消费端每次最多从消息队列服务器取回消息的个数(不设置会全部取回)
+      direct:
+        acknowledge-mode: manual
