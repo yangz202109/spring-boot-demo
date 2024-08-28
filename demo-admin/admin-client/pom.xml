@@ -30,18 +30,6 @@
     <dependency>
       <groupId>de.codecentric</groupId>
       <artifactId>spring-boot-admin-starter-client</artifactId>
-      <exclusions>
-        <exclusion>
-          <groupId>org.jolokia</groupId>
-          <artifactId>jolokia-core</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-
-    <dependency>
-      <groupId>org.jolokia</groupId>
-      <artifactId>jolokia-core</artifactId>
-      <version>1.7.2</version>
     </dependency>
 
     <dependency>
