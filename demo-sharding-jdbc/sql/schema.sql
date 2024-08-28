@@ -1,4 +1,4 @@
-USE `spring-boot-demo`;
+USE `db_0`;
 DROP TABLE IF EXISTS `t_order_0`;
 CREATE TABLE `t_order_0`
 (
@@ -32,7 +32,7 @@ CREATE TABLE `t_order_2`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8 COMMENT ='Spring Boot Demo 分库分表 系列示例表2';
 
-USE `spring-boot-demo-2`;
+USE `db_1`;
 
 DROP TABLE IF EXISTS `t_order_0`;
 CREATE TABLE `t_order_0`

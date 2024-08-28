@@ -1,9 +1,8 @@
-package com.xkcoding.sharding.jdbc;
+package com.study.sharding.jdbc;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * <p>
@@ -14,8 +13,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * @date Created in 2019-01-23 22:05
  */
 @SpringBootApplication
-@EnableTransactionManagement(proxyTargetClass = true)
-@MapperScan("com.xkcoding.sharding.jdbc.mapper")
+@MapperScan("com.study.sharding.jdbc.mapper")
 public class SpringBootDemoShardingJdbcApplication {
 
     public static void main(String[] args) {

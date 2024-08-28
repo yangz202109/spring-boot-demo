@@ -1,0 +1,59 @@
+spring:
+  # 分库分表配置
+  shardingsphere:
+    datasource:
+      # 默认数据源
+      sharding:
+        default-data-source-name: db_master  # 不涉及需要路由拆分的表时默认使用该数据源
+      names: db_master,db_0,db_1
+      db_master:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://localhost:3306/shard_db
+        username: root
+        password: 123456
+      db_0:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://localhost:3306/shard_db_0
+        username: root
+        password: 123456
+      db_1:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://localhost:3306/shard_db_1
+        username: root
+        password: 123456
+    rules:
+      sharding:
+        # 需要进行拆分的表
+        tables:
+          # tb_order拆分逻辑
+          tb_order:
+            actual-data-nodes: db_${0..1}.tb_order_${0..2}
+            # tb_order库路由
+            database-strategy:
+              standard:
+                sharding-column: order_id
+                sharding-algorithm-name: database_inline
+                #precise-algorithm-class-name: com.study.sharding.jdbc.config.CustomShardingAlgorithm 自定义分片规则
+            # tb_order表路由
+            table-strategy:
+              standard:
+                sharding-column: order_id
+                sharding-algorithm-name: table_inline
+                #precise-algorithm-class-name: com.study.sharding.jdbc.config.CustomShardingAlgorithm
+        sharding-algorithms:
+          # tb_order库路由算法
+          database_inline:
+            type: INLINE
+            props:
+              algorithm-expression: db_${order_id % 2}
+          # tb_order表路由算法
+          table_inline:
+            type: INLINE
+            props:
+              algorithm-expression: t_order_${order_id % 3}
+    props:
+      sql-show: true  # 控制台显示SQL
+      sql-comment-parse-enabled: true

@@ -1,4 +1,4 @@
-package com.xkcoding.sharding.jdbc.model;
+package com.study.sharding.jdbc.model;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
  * </p>
  *
  * @author  yangz
- * @date Created in 2019-03-26 13:35
+ * @date Created in 2024-08-26 13:38
  */
 @Data
 @NoArgsConstructor
