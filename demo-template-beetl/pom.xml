@@ -28,6 +28,18 @@
 			<groupId>com.ibeetl</groupId>
 			<artifactId>beetl-framework-starter</artifactId>
 			<version>${ibeetl.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.ibeetl</groupId>
+					<artifactId>beetl</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ibeetl</groupId>
+			<artifactId>beetl</artifactId>
+			<version>3.16.1.RELEASE</version>
 		</dependency>
 
 		<dependency>
