@@ -10,7 +10,7 @@ import java.util.concurrent.CompletionStage;
 @Service
 public class TaskService {
 
-    @Async("taskExecutor") //指定线程次
+    @Async("taskExecutor") //指定线程池
     public void syncTask() {
         log.info("Executing async task in thread: {}", Thread.currentThread().getName());
         try {
