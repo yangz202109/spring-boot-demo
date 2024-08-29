@@ -32,7 +32,6 @@
     <module>demo-task-quartz</module>
     <module>demo-task-xxl-job</module>
     <module>demo-swagger</module>
-    <module>demo-swagger-beauty</module>
     <module>demo-rbac-security</module>
     <module>demo-session</module>
     <module>demo-zookeeper</module>
@@ -74,7 +73,6 @@
     <hutool.version>5.8.25</hutool.version>
     <guava.version>33.2.1-jre</guava.version>
     <user.agent.version>1.21</user.agent.version>
-    <oauth.version>2.6.8</oauth.version>
   </properties>
 
   <dependencyManagement>

@@ -1,6 +1,6 @@
 # spring-boot-demo-swagger
 
-> 此 demo 主要演示了 Spring Boot 如何集成原生 swagger ，自动生成 API 文档。
+> 此 demo 主要演示了 Spring Boot 如何集成原生 swagger3(Open API 3.0) ，自动生成 API 文档。
 >
 > 启动项目，访问地址：http://localhost:8080/demo/swagger-ui.html#/
 
@@ -44,18 +44,28 @@
             <scope>test</scope>
         </dependency>
 
+        <!--springfox-swagger2都是基于Swagger2.x的
+        Springfox是一个用于集成Swagger2.x到Spring应用程序中的库
+        -->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
             <version>${swagger.version}</version>
         </dependency>
-
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
             <version>${swagger.version}</version>
         </dependency>
 
+        <!-- 导入SpringBoot集成Open API 3.0（Swagger3.0）的坐标 -->
+        <!-- 这个坐标它提供了一组注解和工具来集成Swagger UI和OpenAPI规范等-->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>1.7.0</version>
+        </dependency>
+        
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
