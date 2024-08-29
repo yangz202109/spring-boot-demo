@@ -19,7 +19,7 @@
     <description>Demo project for Spring Boot</description>
 
     <parent>
-        <groupId>com.xkcoding</groupId>
+        <groupId>com.study</groupId>
         <artifactId>spring-boot-demo</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
@@ -94,7 +94,7 @@
 @Configuration
 @EnableTransactionManagement
 @EnableJpaAuditing
-@EnableJpaRepositories(basePackages = "com.xkcoding.orm.jpa.repository", transactionManagerRef = "jpaTransactionManager")
+@EnableJpaRepositories(basePackages = "com.study.orm.jpa.repository", transactionManagerRef = "jpaTransactionManager")
 public class JpaConfig {
     @Bean
     @ConfigurationProperties(prefix = "spring.datasource")
@@ -109,7 +109,7 @@ public class JpaConfig {
         LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
         entityManagerFactory.setDataSource(dataSource());
         entityManagerFactory.setJpaVendorAdapter(japVendor);
-        entityManagerFactory.setPackagesToScan("com.xkcoding.orm.jpa.entity");
+        entityManagerFactory.setPackagesToScan("com.study.orm.jpa.entity");
         return entityManagerFactory;
     }
 
@@ -362,7 +362,7 @@ spring:
     open-in-view: true
 logging:
   level:
-    com.xkcoding: debug
+    com.study: debug
     org.hibernate.SQL: debug
     org.hibernate.type: trace
 ```

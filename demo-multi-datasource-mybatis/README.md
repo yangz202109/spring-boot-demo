@@ -35,7 +35,7 @@ CREATE TABLE `multi_user`(
     <description>Demo project for Spring Boot</description>
 
     <parent>
-        <groupId>com.xkcoding</groupId>
+        <groupId>com.study</groupId>
         <artifactId>spring-boot-demo</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
@@ -243,7 +243,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
  * @date Created in 2019-01-21 14:19
  */
 @SpringBootApplication
-@MapperScan(basePackages = "com.xkcoding.multi.datasource.mybatis.mapper")
+@MapperScan(basePackages = "com.study.multi.datasource.mybatis.mapper")
 public class SpringBootDemoMultiDatasourceMybatisApplication {
 
     public static void main(String[] args) {
@@ -275,7 +275,7 @@ spring:
       mp-enabled: true
 logging:
   level:
-    com.xkcoding.multi.datasource.mybatis: debug
+    com.study.multi.datasource.mybatis: debug
 ```
 
 ## 测试类

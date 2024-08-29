@@ -18,7 +18,7 @@
     <description>Demo project for Spring Boot</description>
 
     <parent>
-        <groupId>com.xkcoding</groupId>
+        <groupId>com.study</groupId>
         <artifactId>spring-boot-demo</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
@@ -104,7 +104,7 @@
  * @date Created in 2018-11-08 13:43
  */
 @SpringBootApplication
-@MapperScan(basePackages = {"com.xkcoding.orm.mybatis.MapperAndPage.mapper"}) // 注意：这里的 MapperScan 是 tk.mybatis.spring.annotation.MapperScan 这个包下的
+@MapperScan(basePackages = {"com.study.orm.mybatis.MapperAndPage.mapper"}) // 注意：这里的 MapperScan 是 tk.mybatis.spring.annotation.MapperScan 这个包下的
 public class SpringBootDemoOrmMybatisMapperPageApplication {
 
     public static void main(String[] args) {
@@ -140,14 +140,14 @@ spring:
       connection-timeout: 30000
 logging:
   level:
-    com.xkcoding: debug
-    com.xkcoding.orm.mybatis.MapperAndPage.mapper: trace
+    com.study: debug
+    com.study.orm.mybatis.MapperAndPage.mapper: trace
 mybatis:
   configuration:
     # 下划线转驼峰
     map-underscore-to-camel-case: true
   mapper-locations: classpath:mappers/*.xml
-  type-aliases-package: com.xkcoding.orm.mybatis.MapperAndPage.entity
+  type-aliases-package: com.study.orm.mybatis.MapperAndPage.entity
 mapper:
   mappers:
   - tk.mybatis.mapper.common.Mapper

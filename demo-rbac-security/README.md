@@ -49,7 +49,7 @@
     <description>Demo project for Spring Boot</description>
 
     <parent>
-        <groupId>com.xkcoding</groupId>
+        <groupId>com.study</groupId>
         <artifactId>spring-boot-demo</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
@@ -805,16 +805,16 @@ public class RedisUtil {
 > 监控服务，主要功能：查询当前在线人数分页列表，手动踢出某个用户
 
 ```java
-package com.xkcoding.rbac.security.service;
+package com.study.rbac.security.service;
 
 import cn.hutool.core.util.StrUtil;
 import com.google.common.collect.Lists;
-import com.xkcoding.rbac.security.common.Consts;
-import com.xkcoding.rbac.security.common.PageResult;
-import com.xkcoding.rbac.security.model.User;
-import com.xkcoding.rbac.security.repository.UserDao;
-import com.xkcoding.rbac.security.util.RedisUtil;
-import com.xkcoding.rbac.security.vo.OnlineUser;
+import com.study.rbac.security.common.Consts;
+import com.study.rbac.security.common.PageResult;
+import com.study.rbac.security.model.User;
+import com.study.rbac.security.repository.UserDao;
+import com.study.rbac.security.util.RedisUtil;
+import com.study.rbac.security.vo.OnlineUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

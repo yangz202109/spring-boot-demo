@@ -4,4 +4,4 @@ server:
     context-path: /demo
 logging:
   level:
-    com.xkcoding: debug
+    com.study: debug

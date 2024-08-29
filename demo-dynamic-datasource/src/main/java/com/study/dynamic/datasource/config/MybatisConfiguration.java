@@ -19,7 +19,7 @@ import javax.sql.DataSource;
  * @date Created in 2019-09-04 16:20
  */
 @Configuration
-@MapperScan(basePackages = "com.xkcoding.dynamic.datasource.mapper", sqlSessionFactoryRef = "sqlSessionFactory")
+@MapperScan(basePackages = "com.study.dynamic.datasource.mapper", sqlSessionFactoryRef = "sqlSessionFactory")
 public class MybatisConfiguration {
     /**
      * 创建会话工厂。

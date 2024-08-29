@@ -32,7 +32,7 @@ import java.lang.reflect.Method;
 @Component
 @RequiredArgsConstructor(onConstructor_ = @Autowired)
 public class DatasourceSelectorAspect {
-    @Pointcut("execution(public * com.xkcoding.dynamic.datasource.controller.*.*(..))")
+    @Pointcut("execution(public * com.study.dynamic.datasource.controller.*.*(..))")
     public void datasourcePointcut() {
     }
 

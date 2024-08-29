@@ -59,7 +59,7 @@ public class CodeGenServiceTest {
         config.setModuleName("shiro");
         config.setAuthor("Yangkai.Shen");
         config.setComments("用户角色信息");
-        config.setPackageName("com.xkcoding");
+        config.setPackageName("com.study");
         config.setTablePrefix("shiro_");
 
         byte[] zip = codeGenService.generatorCode(config);

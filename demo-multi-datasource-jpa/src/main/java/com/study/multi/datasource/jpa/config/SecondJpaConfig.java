@@ -33,8 +33,8 @@ import javax.sql.DataSource;
     // 事务管理bean名称
     transactionManagerRef = "secondTransactionManager")
 public class SecondJpaConfig {
-    static final String REPOSITORY_PACKAGE = "com.xkcoding.multi.datasource.jpa.repository.second";
-    private static final String ENTITY_PACKAGE = "com.xkcoding.multi.datasource.jpa.entity.second";
+    static final String REPOSITORY_PACKAGE = "com.study.multi.datasource.jpa.repository.second";
+    private static final String ENTITY_PACKAGE = "com.study.multi.datasource.jpa.entity.second";
 
 
     /**

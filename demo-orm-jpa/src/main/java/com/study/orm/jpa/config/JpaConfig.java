@@ -25,7 +25,7 @@ import javax.sql.DataSource;
 @Configuration
 @EnableTransactionManagement
 @EnableJpaAuditing
-@EnableJpaRepositories(basePackages = "com.xkcoding.orm.jpa.repository", transactionManagerRef = "jpaTransactionManager")
+@EnableJpaRepositories(basePackages = "com.study.orm.jpa.repository", transactionManagerRef = "jpaTransactionManager")
 public class JpaConfig {
     @Bean
     @ConfigurationProperties(prefix = "spring.datasource")
@@ -40,7 +40,7 @@ public class JpaConfig {
         LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
         entityManagerFactory.setDataSource(dataSource());
         entityManagerFactory.setJpaVendorAdapter(japVendor);
-        entityManagerFactory.setPackagesToScan("com.xkcoding.orm.jpa.entity");
+        entityManagerFactory.setPackagesToScan("com.study.orm.jpa.entity");
         return entityManagerFactory;
     }
 

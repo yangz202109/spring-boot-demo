@@ -34,8 +34,8 @@ import javax.sql.DataSource;
         // 事务管理bean名称
         transactionManagerRef = "primaryTransactionManager")
 public class PrimaryJpaConfig {
-    static final String REPOSITORY_PACKAGE = "com.xkcoding.multi.datasource.jpa.repository.primary";
-    private static final String ENTITY_PACKAGE = "com.xkcoding.multi.datasource.jpa.entity.primary";
+    static final String REPOSITORY_PACKAGE = "com.study.multi.datasource.jpa.repository.primary";
+    private static final String ENTITY_PACKAGE = "com.study.multi.datasource.jpa.entity.primary";
 
 
     /**

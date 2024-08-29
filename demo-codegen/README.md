@@ -34,7 +34,7 @@
     <description>Demo project for Spring Boot</description>
 
     <parent>
-        <groupId>com.xkcoding</groupId>
+        <groupId>com.study</groupId>
         <artifactId>spring-boot-demo</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
@@ -125,9 +125,9 @@
 
 ```properties
 #代码生成器，配置信息
-mainPath=com.xkcoding
+mainPath=com.study
 #包名
-package=com.xkcoding
+package=com.study
 moduleName=generator
 #作者
 author=Yangkai.Shen

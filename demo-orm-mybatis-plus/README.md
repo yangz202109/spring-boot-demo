@@ -20,7 +20,7 @@
     <description>Demo project for Spring Boot</description>
 
     <parent>
-        <groupId>com.xkcoding</groupId>
+        <groupId>com.study</groupId>
         <artifactId>spring-boot-demo</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
@@ -97,7 +97,7 @@
  * @date Created in 2018-11-08 17:29
  */
 @Configuration
-@MapperScan(basePackages = {"com.xkcoding.orm.mybatis.plus.mapper"})
+@MapperScan(basePackages = {"com.study.orm.mybatis.plus.mapper"})
 @EnableTransactionManagement
 public class MybatisPlusConfig {
     /**
@@ -121,7 +121,7 @@ public class MybatisPlusConfig {
 ## CommonFieldHandler.java
 
 ```java
-package com.xkcoding.orm.mybatis.plus.config;
+package com.study.orm.mybatis.plus.config;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import lombok.extern.slf4j.Slf4j;
@@ -184,12 +184,12 @@ spring:
       connection-timeout: 30000
 logging:
   level:
-    com.xkcoding: debug
-    com.xkcoding.orm.mybatis.plus.mapper: trace
+    com.study: debug
+    com.study.orm.mybatis.plus.mapper: trace
 mybatis-plus:
   mapper-locations: classpath:mappers/*.xml
   #实体扫描，多个package用逗号或者分号分隔
-  typeAliasesPackage: com.xkcoding.orm.mybatis.plus.entity
+  typeAliasesPackage: com.study.orm.mybatis.plus.entity
   global-config:
     # 数据库相关配置
     db-config:

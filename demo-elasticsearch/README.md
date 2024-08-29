@@ -60,7 +60,7 @@ services:
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <artifactId>spring-boot-demo</artifactId>
-    <groupId>com.xkcoding</groupId>
+    <groupId>com.study</groupId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
 
@@ -169,7 +169,7 @@ services:
 >
 
 ```java
-package com.xkcoding.elasticsearch.entity;
+package com.study.elasticsearch.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -230,7 +230,7 @@ public class Person implements Serializable {
 ## PersonService.java
 
 ```java
-package com.xkcoding.elasticsearch.service;
+package com.study.elasticsearch.service;
 
 import entity.com.study.elasticsearch.Person;
 import org.springframework.lang.Nullable;
@@ -305,11 +305,11 @@ public interface PersonService {
 > service 实现类型，基本CURD操作
 
 ```java
-package com.xkcoding.elasticsearch.service.impl;
+package com.study.elasticsearch.service.impl;
 
 import cn.hutool.core.bean.BeanUtil;
 import entity.com.study.elasticsearch.Person;
-import com.xkcoding.elasticsearch.service.base.BaseElasticsearchService;
+import com.study.elasticsearch.service.base.BaseElasticsearchService;
 import org.elasticsearch.action.index.IndexRequest;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.search.SearchHit;
@@ -402,7 +402,7 @@ public class PersonServiceImpl extends BaseElasticsearchService implements Perso
 > 主要功能测试，参见service 注释说明
 
 ```java
-package com.xkcoding.elasticsearch;
+package com.study.elasticsearch;
 
 import entity.com.study.elasticsearch.Person;
 import org.junit.Test;

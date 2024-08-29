@@ -18,7 +18,7 @@
     <description>Demo project for Spring Boot</description>
 
     <parent>
-        <groupId>com.xkcoding</groupId>
+        <groupId>com.study</groupId>
         <artifactId>spring-boot-demo</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
@@ -256,7 +256,7 @@ public class ZooLockAspect {
     /**
      * 切入点
      */
-    @Pointcut("@annotation(com.xkcoding.zookeeper.annotation.ZooLock)")
+    @Pointcut("@annotation(annotation.com.study.zookeeper.ZooLock)")
     public void doLock() {
 
     }

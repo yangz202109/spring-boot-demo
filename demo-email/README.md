@@ -18,7 +18,7 @@
   <description>Demo project for Spring Boot</description>
 
   <parent>
-    <groupId>com.xkcoding</groupId>
+    <groupId>com.study</groupId>
     <artifactId>spring-boot-demo</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
@@ -83,7 +83,7 @@ spring:
     host: smtp.mxhichina.com
     port: 465
     username: spring-boot-demo@xkcoding.com
-    # 使用 jasypt 加密密码，使用com.xkcoding.email.PasswordTest.testGeneratePassword 生成加密密码，替换 ENC(加密密码)
+    # 使用 jasypt 加密密码，使用com.study.email.PasswordTest.testGeneratePassword 生成加密密码，替换 ENC(加密密码)
     password: ENC(OT0qGOpXrr1Iog1W+fjOiIDCJdBjHyhy)
     protocol: smtp
     test-connection: true

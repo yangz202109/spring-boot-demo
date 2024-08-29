@@ -18,7 +18,7 @@
     <description>Demo project for Spring Boot</description>
 
     <parent>
-        <groupId>com.xkcoding</groupId>
+        <groupId>com.study</groupId>
         <artifactId>spring-boot-demo</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
@@ -118,15 +118,15 @@ spring:
 #      connection-timeout: 30000
 logging:
   level:
-    com.xkcoding: debug
-    com.xkcoding.orm.beetlsql: trace
+    com.study: debug
+    com.study.orm.beetlsql: trace
 beetl:
   enabled: false
 beetlsql:
   enabled: true
   sqlPath: /sql
   daoSuffix: Dao
-  basePackage: com.xkcoding.orm.beetlsql.dao
+  basePackage: com.study.orm.beetlsql.dao
   dbStyle: org.beetl.sql.core.db.MySqlStyle
   nameConversion: org.beetl.sql.core.UnderlinedNameConversion
 beet-beetlsql:

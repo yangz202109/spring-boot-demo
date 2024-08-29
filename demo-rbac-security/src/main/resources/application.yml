@@ -46,7 +46,7 @@ jwt:
     remember: 604800000
 logging:
   level:
-    com.xkcoding.rbac.security: debug
+    com.study.rbac.security: debug
 custom:
   config:
     ignores:

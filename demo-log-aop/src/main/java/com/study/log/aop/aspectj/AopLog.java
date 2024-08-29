@@ -41,7 +41,7 @@ public class AopLog {
     /**
      * 切入点
      */
-    @Pointcut("execution(public * com.xkcoding.log.aop.controller.*Controller.*(..))")
+    @Pointcut("execution(public * com.study.log.aop.controller.*Controller.*(..))")
     public void log() {
 
     }

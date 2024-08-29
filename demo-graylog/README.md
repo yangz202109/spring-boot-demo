@@ -81,7 +81,7 @@ services:
   <description>Demo project for Spring Boot</description>
 
   <parent>
-    <groupId>com.xkcoding</groupId>
+    <groupId>com.study</groupId>
     <artifactId>spring-boot-demo</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
@@ -245,7 +245,7 @@ spring:
   <logger name="com.netflix.discovery" level="INFO"/>
   <logger name="com.netflix.eureka" level="INFO"/>
   <!-- 业务日志 -->
-  <Logger name="com.xkcoding" level="DEBUG"/>
+  <Logger name="com.study" level="DEBUG"/>
 
 </configuration>
 ```

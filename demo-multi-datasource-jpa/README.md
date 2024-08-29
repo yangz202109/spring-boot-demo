@@ -18,7 +18,7 @@
     <description>Demo project for Spring Boot</description>
 
     <parent>
-        <groupId>com.xkcoding</groupId>
+        <groupId>com.study</groupId>
         <artifactId>spring-boot-demo</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
@@ -211,8 +211,8 @@ public class SecondDataSourceConfig {
         // 事务管理bean名称
         transactionManagerRef = "primaryTransactionManager")
 public class PrimaryJpaConfig {
-    static final String REPOSITORY_PACKAGE = "com.xkcoding.multi.datasource.jpa.repository.primary";
-    private static final String ENTITY_PACKAGE = "com.xkcoding.multi.datasource.jpa.entity.primary";
+    static final String REPOSITORY_PACKAGE = "com.study.multi.datasource.jpa.repository.primary";
+    private static final String ENTITY_PACKAGE = "com.study.multi.datasource.jpa.entity.primary";
 
 
     /**
@@ -299,8 +299,8 @@ public class PrimaryJpaConfig {
         // 事务管理bean名称
         transactionManagerRef = "secondTransactionManager")
 public class SecondJpaConfig {
-    static final String REPOSITORY_PACKAGE = "com.xkcoding.multi.datasource.jpa.repository.second";
-    private static final String ENTITY_PACKAGE = "com.xkcoding.multi.datasource.jpa.entity.second";
+    static final String REPOSITORY_PACKAGE = "com.study.multi.datasource.jpa.repository.second";
+    private static final String ENTITY_PACKAGE = "com.study.multi.datasource.jpa.entity.second";
 
 
     /**
@@ -416,7 +416,7 @@ spring:
       open-in-view: true
 logging:
   level:
-    com.xkcoding: debug
+    com.study: debug
     org.hibernate.SQL: debug
     org.hibernate.type: trace
 ```
@@ -424,7 +424,7 @@ logging:
 ## SpringBootDemoMultiDatasourceJpaApplicationTests.java
 
 ```java
-package com.xkcoding.multi.datasource.jpa;
+package com.study.multi.datasource.jpa;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.lang.Snowflake;
@@ -503,7 +503,7 @@ public class SpringBootDemoMultiDatasourceJpaApplicationTests {
 ├── src
 │   ├── main
 │   │   ├── java
-│   │   │   └── com.xkcoding.multi.datasource.jpa
+│   │   │   └── com.study.multi.datasource.jpa
 │   │   │       ├── SpringBootDemoMultiDatasourceJpaApplication.java
 │   │   │       ├── config
 │   │   │       │   ├── PrimaryDataSourceConfig.java
@@ -525,7 +525,7 @@ public class SpringBootDemoMultiDatasourceJpaApplicationTests {
 │   │       └── application.yml
 │   └── test
 │       └── java
-│           └── com.xkcoding.multi.datasource.jpa
+│           └── com.study.multi.datasource.jpa
 │               └── SpringBootDemoMultiDatasourceJpaApplicationTests.java
 └── target
 ```

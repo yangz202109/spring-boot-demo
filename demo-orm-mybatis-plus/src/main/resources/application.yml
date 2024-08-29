@@ -22,12 +22,12 @@ spring:
       connection-timeout: 30000
 logging:
   level:
-    com.xkcoding: debug
-    com.xkcoding.orm.mybatis.plus.mapper: trace
+    com.study: debug
+    com.study.orm.mybatisPlus.mapper: trace
 mybatis-plus:
   mapper-locations: classpath:mappers/*.xml
   #实体扫描，多个package用逗号或者分号分隔
-  typeAliasesPackage: com.xkcoding.orm.mybatis.plus.entity
+  typeAliasesPackage: com.study.orm.mybatisPlus.entity
   global-config:
     # 数据库相关配置
     db-config:

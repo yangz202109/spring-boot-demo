@@ -18,7 +18,7 @@
     <description>Demo project for Spring Boot</description>
 
     <parent>
-        <groupId>com.xkcoding</groupId>
+        <groupId>com.study</groupId>
         <artifactId>spring-boot-demo</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
@@ -91,7 +91,7 @@
  */
 @Configuration
 @EnableScheduling
-@ComponentScan(basePackages = {"com.xkcoding.task.job"})
+@ComponentScan(basePackages = {"com.study.task.job"})
 public class TaskConfig implements SchedulingConfigurer {
     @Override
     public void configureTasks(ScheduledTaskRegistrar taskRegistrar) {

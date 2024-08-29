@@ -12,7 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author  yangz
  * @date Created in 2018-11-08 10:52
  */
-@MapperScan(basePackages = {"com.xkcoding.orm.mybatis.mapper"})
+@MapperScan(basePackages = {"com.study.orm.mybatis.mapper"})
 @SpringBootApplication
 public class MybatisApplication {
 

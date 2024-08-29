@@ -21,4 +21,4 @@ spring:
           driver-class-name: com.mysql.jdbc.Driver
 logging:
   level:
-    com.xkcoding.multi.datasource.mybatis: debug
+    com.study.multi.datasource.mybatis: debug

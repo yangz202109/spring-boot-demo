@@ -13,7 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date Created in 2019-01-21 14:19
  */
 @SpringBootApplication
-@MapperScan(basePackages = "com.xkcoding.multi.datasource.mybatis.mapper")
+@MapperScan(basePackages = "com.study.multi.datasource.mybatis.mapper")
 public class MultiDatasourceMybatisApplication {
 
     public static void main(String[] args) {

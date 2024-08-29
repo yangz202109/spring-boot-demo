@@ -34,7 +34,7 @@
 
   <parent>
     <artifactId>spring-boot-demo</artifactId>
-    <groupId>com.xkcoding</groupId>
+    <groupId>com.study</groupId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
 
