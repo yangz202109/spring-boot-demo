@@ -237,7 +237,7 @@ public class TaskFactoryTest extends SpringBootDemoAsyncApplicationTests {
 2018-12-29 10:57:30.514  INFO 3134 --- [   async-task-2] com.xkcoding.async.task.TaskFactory      : asyncTask2执行成功，当前线程名称【async-task-2】
 2018-12-29 10:57:31.516  INFO 3134 --- [   async-task-3] com.xkcoding.async.task.TaskFactory      : asyncTask3执行成功，当前线程名称【async-task-3】
 2018-12-29 10:57:33.517  INFO 3134 --- [   async-task-1] com.xkcoding.async.task.TaskFactory      : asyncTask1执行成功，当前线程名称【async-task-1】
-2018-12-29 10:57:33.517  INFO 3134 --- [           main] com.xkcoding.async.task.TaskFactoryTest  : 异步任务全部执行结束，总耗时：5015 毫秒
+2018-12-29 10:57:33.517  INFO 3134 --- [           main] task.com.study.async.TaskFactoryTest  : 异步任务全部执行结束，总耗时：5015 毫秒
 ```
 
 ### 同步任务
@@ -249,7 +249,7 @@ public class TaskFactoryTest extends SpringBootDemoAsyncApplicationTests {
 2018-12-29 10:55:56.839  INFO 3079 --- [           main] com.xkcoding.async.task.TaskFactory      : task2执行成功，当前线程名称【main】
 2018-12-29 10:55:56.839  INFO 3079 --- [           main] com.xkcoding.async.task.TaskFactory      : task3开始执行，当前线程名称【main】
 2018-12-29 10:55:59.843  INFO 3079 --- [           main] com.xkcoding.async.task.TaskFactory      : task3执行成功，当前线程名称【main】
-2018-12-29 10:55:59.843  INFO 3079 --- [           main] com.xkcoding.async.task.TaskFactoryTest  : 同步任务全部执行结束，总耗时：10023 毫秒
+2018-12-29 10:55:59.843  INFO 3079 --- [           main] task.com.study.async.TaskFactoryTest  : 同步任务全部执行结束，总耗时：10023 毫秒
 ```
 
 ## 参考

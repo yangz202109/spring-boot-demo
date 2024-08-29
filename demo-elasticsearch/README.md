@@ -232,7 +232,7 @@ public class Person implements Serializable {
 ```java
 package com.xkcoding.elasticsearch.service;
 
-import com.xkcoding.elasticsearch.entity.Person;
+import entity.com.study.elasticsearch.Person;
 import org.springframework.lang.Nullable;
 
 import java.util.List;
@@ -308,7 +308,7 @@ public interface PersonService {
 package com.xkcoding.elasticsearch.service.impl;
 
 import cn.hutool.core.bean.BeanUtil;
-import com.xkcoding.elasticsearch.entity.Person;
+import entity.com.study.elasticsearch.Person;
 import com.xkcoding.elasticsearch.service.base.BaseElasticsearchService;
 import org.elasticsearch.action.index.IndexRequest;
 import org.elasticsearch.action.search.SearchResponse;
@@ -404,7 +404,7 @@ public class PersonServiceImpl extends BaseElasticsearchService implements Perso
 ```java
 package com.xkcoding.elasticsearch;
 
-import com.xkcoding.elasticsearch.entity.Person;
+import entity.com.study.elasticsearch.Person;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

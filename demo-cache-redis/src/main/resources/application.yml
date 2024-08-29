@@ -20,4 +20,4 @@ spring:
     type: redis
 logging:
   level:
-    com.xkcoding: debug
+    com.study: debug

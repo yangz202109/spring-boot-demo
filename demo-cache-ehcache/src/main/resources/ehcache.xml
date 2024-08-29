@@ -1,6 +1,5 @@
 <!-- ehcache配置 -->
-<ehcache
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
         updateCheck="false">
     <!--缓存路径，用户目录下的base_ehcache目录-->
