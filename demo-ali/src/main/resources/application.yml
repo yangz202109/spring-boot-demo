@@ -1,0 +1,15 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /demo
+
+sms:
+  aliyun:
+    accessKeyId: your-access-key-id
+    accessKeySecret:  your-access-key-secret
+    signName: your-sign-name
+    endpoint: dysmsapi.aliyuncs.com
+    templateCode: SMS_#########
+    # 是否开启短信服务
+    pushSms: true
+

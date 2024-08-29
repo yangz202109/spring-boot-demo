@@ -56,6 +56,7 @@
     <module>demo-elasticsearch</module>
     <module>demo-https</module>
     <module>demo-flyway</module>
+    <module>demo-ali</module>
   </modules>
   <packaging>pom</packaging>
 

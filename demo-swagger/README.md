@@ -2,7 +2,7 @@
 
 > 此 demo 主要演示了 Spring Boot 如何集成原生 swagger3(Open API 3.0) ，自动生成 API 文档。
 >
-> 启动项目，访问地址：http://localhost:8080/demo/swagger-ui.html#/
+> 启动项目，访问地址：http://localhost:8080/demo/swagger-ui/index.html
 
 # pom.xml
 
