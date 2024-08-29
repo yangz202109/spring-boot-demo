@@ -1,6 +1,6 @@
 package com.study.cache.redis.service;
 
-import com.study.cache.redis.SpringBootDemoCacheRedisApplicationTests;
+import com.study.cache.redis.CacheRedisApplicationTests;
 import com.study.cache.redis.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
@@ -15,7 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @date Created in 2018-11-15 16:53
  */
 @Slf4j
-public class UserServiceTest extends SpringBootDemoCacheRedisApplicationTests {
+public class UserServiceTest extends CacheRedisApplicationTests {
     @Autowired
     private UserService userService;
 

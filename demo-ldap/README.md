@@ -176,7 +176,7 @@ public interface PersonRepository extends CrudRepository<Person, Name> {
      * 根据用户名查找
      *
      * @param uid 用户名
-     * @return com.xkcoding.ldap.entity.Person
+     * @return entity.com.study.ldap.Person
      */
     Person findByUid(String uid);
 }

@@ -1,7 +1,7 @@
 package com.study.cache.ehcache.service;
 
 import com.study.cache.ehcache.entity.User;
-import com.study.cache.ehcache.SpringBootDemoCacheEhcacheApplicationTests;
+import com.study.cache.ehcache.CacheEhcacheApplicationTests;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @date Created in 2018-11-16 16:58
  */
 @Slf4j
-public class UserServiceTest extends SpringBootDemoCacheEhcacheApplicationTests {
+public class UserServiceTest extends CacheEhcacheApplicationTests {
 
     @Autowired
     private UserService userService;

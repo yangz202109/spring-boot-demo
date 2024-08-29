@@ -428,10 +428,10 @@ package com.xkcoding.multi.datasource.jpa;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.lang.Snowflake;
-import com.xkcoding.multi.datasource.jpa.entity.primary.PrimaryMultiTable;
-import com.xkcoding.multi.datasource.jpa.entity.second.SecondMultiTable;
-import com.xkcoding.multi.datasource.jpa.repository.primary.PrimaryMultiTableRepository;
-import com.xkcoding.multi.datasource.jpa.repository.second.SecondMultiTableRepository;
+import primary.entity.com.study.multi.datasource.jpa.PrimaryMultiTable;
+import second.entity.com.study.multi.datasource.jpa.SecondMultiTable;
+import primary.repository.com.study.multi.datasource.jpa.PrimaryMultiTableRepository;
+import second.repository.com.study.multi.datasource.jpa.SecondMultiTableRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -454,7 +454,7 @@ public class SpringBootDemoMultiDatasourceJpaApplicationTests {
 
     @Test
     public void testInsert() {
-        PrimaryMultiTable primary = new PrimaryMultiTable(snowflake.nextId(),"测试名称-1");
+        PrimaryMultiTable primary = new PrimaryMultiTable(snowflake.nextId(), "测试名称-1");
         primaryRepo.save(primary);
 
         SecondMultiTable second = new SecondMultiTable();
@@ -465,7 +465,7 @@ public class SpringBootDemoMultiDatasourceJpaApplicationTests {
     @Test
     public void testUpdate() {
         primaryRepo.findAll().forEach(primary -> {
-            primary.setName("修改后的"+primary.getName());
+            primary.setName("修改后的" + primary.getName());
             primaryRepo.save(primary);
 
             SecondMultiTable second = new SecondMultiTable();
