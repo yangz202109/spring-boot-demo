@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 /**
- * 模拟数据库操作
+ * 图书数据库操作
  * @author yangz
  * @date 2024/8/29 - 17:25
  */

@@ -16,7 +16,9 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <ali.sms.version>3.0.0</ali.sms.version>
+        <ali.pay.version>4.39.190.ALL</ali.pay.version>
         <easyexcel.version>4.0.2</easyexcel.version>
+        <fastjson.version>2.0.51</fastjson.version>
         <commons.compress.version>1.27.1</commons.compress.version>
     </properties>
 
@@ -49,15 +51,21 @@
             <version>${ali.sms.version}</version>
         </dependency>
 
-        <!--处理 Excel 文件的导入和导出操作-->
+        <!--处理 Excel 文件-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>easyexcel</artifactId>
             <version>${easyexcel.version}</version>
             <exclusions>
+                <!--不安全-->
                 <exclusion>
                     <groupId>org.apache.commons</groupId>
                     <artifactId>commons-compress</artifactId>
+                </exclusion>
+                <!--冲突-->
+                <exclusion>
+                    <groupId>commons-io</groupId>
+                    <artifactId>commons-io</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -66,6 +74,20 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-compress</artifactId>
             <version>${commons.compress.version}</version>
+        </dependency>
+
+        <!-- 支付宝接入 -->
+        <dependency>
+            <groupId>com.alipay.sdk</groupId>
+            <artifactId>alipay-sdk-java</artifactId>
+            <version>${ali.pay.version}</version>
+            <exclusions>
+                <!--冲突-->
+                <exclusion>
+                    <groupId>org.bouncycastle</groupId>
+                    <artifactId>bcprov-jdk15on</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
     </dependencies>

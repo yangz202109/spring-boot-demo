@@ -15,16 +15,20 @@ import org.springframework.stereotype.Component;
 @Data
 @Component
 @ConfigurationProperties(prefix = "sms.aliyun")
-public class AliYunSmsConfig {
+public class AliSmsConfig {
 
     //阿里云访问密钥id
     private String accessKeyId;
+
     //阿里云访问密钥Secret
     private String accessKeySecret;
+
     //短信签名名称
     private String signName;
+
     //短信模板Code
     private String templateCode;
+
     private String endpoint;
 
 

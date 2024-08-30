@@ -4,7 +4,7 @@ package com.study.ali.service;
  * @author yangz
  * @date 2024/8/29 - 15:42
  */
-public interface AliSmsService {
+public interface SmsService {
 
     void sendSms(String phone);
 

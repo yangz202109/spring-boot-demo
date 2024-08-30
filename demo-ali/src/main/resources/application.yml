@@ -13,3 +13,12 @@ sms:
     # 是否开启短信服务
     pushSms: true
 
+alipay:
+  appId: your-appId
+  privateKey: your-privateKey
+  publicKey: your-publicKey
+  format: json
+  charset: UTF-8
+  signType: RSA2
+  gatewayUrl: https://openapi.alipay.com/gateway.do
+
