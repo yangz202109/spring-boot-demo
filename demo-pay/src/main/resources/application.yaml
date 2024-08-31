@@ -1,0 +1,11 @@
+alipay:
+  easy:
+    protocol: https
+    gatewayHost: openapi-sandbox.dl.alipaydev.com
+    signType: RSA2
+    appId: 9021000133624745
+    merchantPrivateKey: MIIEvQIBADANBgkqhkiG9w0B
+    alipayPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOC
+    notifyUrl: http://maggie.cpolar.io/notify
+server:
+  port: 9527
