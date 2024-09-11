@@ -1,20 +1,23 @@
-# 基础镜像
-FROM openjdk:8-jdk-alpine
+# 使用官方的Jdk作为基础镜像
+FROM openjdk:21-jdk-alpine
 
 # 作者信息
-MAINTAINER "Yangkai.Shen 237497819@qq.com"
+MAINTAINER "yangz 3260519078@qq.com"
 
-# 添加一个存储空间
-VOLUME /tmp
+# 设置工作目录(不存在则手动创建)即指定了容器中接下来所有命令执行的上下文,使得之后的所有命令都在这个目录中执行。
+WORKDIR /app
 
-# 暴露8080端口
-EXPOSE 8080
+# 设置环境变量,定义了环境变量,那么在后续的指令中,就可以使用这个环境变量。
+ARG projectName="spring-boot-demo-docker"
+# 设置环境变量,与 ARG 作用一致,不过作用域不一样,ARG 设置的环境变量仅对 Dockerfile 内有效。
+ENV port=8080
 
-# 添加变量，如果使用dockerfile-maven-plugin，则会自动替换这里的变量内容
-ARG JAR_FILE=target/spring-boot-demo-docker.jar
+# 将当前项目target目录的jar包复制到容器的工作目录(/app)中
+COPY target/${projectName}.jar ${projectName}.jar
 
-# 往容器中添加jar包
-ADD ${JAR_FILE} app.jar
+# 暴露端口
+EXPOSE ${port}
 
-# 启动镜像自动运行程序
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/urandom","-jar","/app.jar"]
+# CMD在docker run 时运行, RUN 是在 docker build 时运行, ENTRYPOINT与CMD 类似 但是不会被 docker run 的命令行参数指定的指令所覆盖。
+# 为启动的容器指定默认要运行的程序
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app/${projectName}.jar"]
