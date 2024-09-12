@@ -22,6 +22,16 @@ public class TaskService {
         log.info("Async operation completed.");
     }
 
+    //使用Future来返回异步调用的结果
+    @Async("taskExecutor")
+    public Future<String> syncTaskGetResult() throws Exception {
+        System.out.println("开始做任务一");
+        long start = System.currentTimeMillis();
+        Thread.sleep(random.nextInt(10000));
+        long end = System.currentTimeMillis();
+        System.out.println("完成任务一，耗时：" + (end - start) + "毫秒");
+        return new AsyncResult<>("任务一完成");
+    }
 
     /**
      * 使用 CompletionStage 实现异步任务
