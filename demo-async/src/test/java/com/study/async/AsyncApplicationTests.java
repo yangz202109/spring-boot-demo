@@ -16,7 +16,7 @@ public class AsyncApplicationTests {
     public void test() throws Exception {
         long start = System.currentTimeMillis();
      
-        Future<String> task = taskService.doTaskOne();
+        Future<String> task = taskService.syncTaskGetResult();
         while(true) {
             if(task.isDone() ) {
                 // 任务都调用完成，退出循环等待
