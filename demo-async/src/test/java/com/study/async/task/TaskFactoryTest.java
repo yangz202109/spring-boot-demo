@@ -5,6 +5,7 @@ import com.study.async.service.TaskService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import java.util.concurrent.CompletableFuture;
 
 /**
  * <p>
@@ -20,7 +21,7 @@ public class TaskFactoryTest extends AsyncApplicationTests {
     private TaskService taskService;
 
     @Test
-    public void test() {
+    public void test1() {
         taskService.syncTask();
         log.info("测试方法执行完毕");
     }
@@ -28,16 +29,15 @@ public class TaskFactoryTest extends AsyncApplicationTests {
     @Test
     public void test() throws Exception {
         long start = System.currentTimeMillis();
-     
-        Future<String> task = taskService.syncTaskGetResult();
-        while(true) {
-            if(task.isDone() ) {
-                // 任务都调用完成，退出循环等待
-                break;
-            }
-            Thread.sleep(1000);
+
+        CompletableFuture<String> taskGetResult = taskService.syncTaskGetResult();
+        try {
+            //阻塞等待结果
+            String result = taskGetResult.get();
+            long end = System.currentTimeMillis();
+            log.info("任务全部完成,总耗时：{} 毫秒,result:{}", (end - start), result);
+        } catch (InterruptedException e) {
+            log.error("执行异步任务错误,msg:{}", e.getMessage());
         }
-        long end = System.currentTimeMillis();
-        log.info("任务全部完成，总耗时：{} "毫秒"" , (end - start));
     }
 }

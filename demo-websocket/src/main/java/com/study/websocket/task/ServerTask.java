@@ -7,12 +7,11 @@ import com.study.websocket.common.WebSocketConst;
 import com.study.websocket.model.Server;
 import com.study.websocket.payload.ServerVO;
 import com.study.websocket.util.ServerUtil;
+import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-
 import java.util.Date;
 
 /**
@@ -26,7 +25,7 @@ import java.util.Date;
 @Slf4j
 @Component
 public class ServerTask {
-    @Autowired
+    @Resource
     private SimpMessagingTemplate wsTemplate;
 
     /**
