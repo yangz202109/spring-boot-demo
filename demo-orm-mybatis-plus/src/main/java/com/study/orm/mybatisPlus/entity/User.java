@@ -6,7 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.Date;
@@ -26,7 +25,7 @@ import static com.baomidou.mybatisplus.annotation.FieldFill.INSERT_UPDATE;
 @AllArgsConstructor
 @Builder
 @TableName("orm_user")
-public class User implements Serializable {
+public class User implements Serializable{
     @Serial
     private static final long serialVersionUID = -1840831686851699943L;
 
